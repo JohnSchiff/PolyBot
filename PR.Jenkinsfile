@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Unittest') {
             steps {
-                echo "testing c"
+                echo "testing SOFI"
             }
         }
         stage('Functional test') {
