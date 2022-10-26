@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh'''
                 cd 
-                docker build -t $IMAGE_NAME:$IMAGE_TAG -f Build_Jenkins_Agent_Image.Jenkinsfile .
+                docker build -t $IMAGE_NAME:$IMAGE_TAG -f JenkinsAgent.Dockerfile .
                 docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG 
                  
                  '''
