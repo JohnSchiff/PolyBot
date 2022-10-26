@@ -14,7 +14,7 @@ pipeline {
             sh '''
             pwd
             cd /var/lib/jenkins/workspace/BotBuild/infra/jenkins
-            echo Now    in her 
+            echo Now  n her 
             pwd
             '''
         }
