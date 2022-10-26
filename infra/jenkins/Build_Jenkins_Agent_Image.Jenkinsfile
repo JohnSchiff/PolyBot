@@ -13,7 +13,9 @@ pipeline {
         steps{
             sh '''
             pwd
-            echo this is 
+            cd /var/lib/jenkins/workspace/BotBuild/infra/jenkins
+            echo Now we are in 
+            pwd
             '''
         }
         }
@@ -21,6 +23,7 @@ pipeline {
         stage('Build Jenkins Agent Docker') {
             steps {
                 sh'''
+                cd 
                 docker build -t $IMAGE_NAME:$IMAGE_TAG -f Build_Jenkins_Agent_Image.Jenkinsfile infra/jenkins/
                 docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG 
                  
