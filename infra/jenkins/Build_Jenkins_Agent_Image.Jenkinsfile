@@ -23,8 +23,8 @@ pipeline {
         stage('Build Jenkins Agent Docker') {
             steps {
                 sh'''
-                cd 
-                docker build -t $IMAGE_NAME:$IMAGE_TAG -f JenkinsAgent.Dockerfile /infra/jenkins
+                cd /var/lib/jenkins/workspace/BotBuild/infra/jenkins
+                docker build -t $IMAGE_NAME:$IMAGE_TAG -f JenkinsAgent.Dockerfile .
                 docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG 
                  
                  '''
