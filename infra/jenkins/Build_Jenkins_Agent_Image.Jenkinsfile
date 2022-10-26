@@ -13,6 +13,7 @@ pipeline {
         steps{
             sh '''
             pwd
+            echo this is 
             '''
         }
         }
