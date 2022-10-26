@@ -12,7 +12,7 @@ pipeline {
         stage('Echoing'){
         steps{
             sh '''
-            echo hello world
+            echo  hello world
             pwd
             '''
         }
