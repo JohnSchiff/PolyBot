@@ -26,7 +26,7 @@ pipeline {
                 cd /var/lib/jenkins/workspace/BotBuild/infra/jenkins
                 docker build -t $IMAGE_NAME:$IMAGE_TAG -f JenkinsAgent.Dockerfile .
                 docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG 
-                 
+                docker push $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG 
                  '''
                 }
         }
