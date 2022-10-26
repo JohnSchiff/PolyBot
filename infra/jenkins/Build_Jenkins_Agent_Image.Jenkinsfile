@@ -13,6 +13,7 @@ pipeline {
         stage('Build Jenkins Agent Docker') {
             steps {
                 sh'''
+                 echo ukraine
                  aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $REGISTRY_URL
                  docker build -t $IMAGE_NAME:$IMAGE_TAG -f $FILE .
                  docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG 
