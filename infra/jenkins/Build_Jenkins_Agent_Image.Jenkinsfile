@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         REGISTRY_URL= "352708296901.dkr.ecr.eu-west-2.amazonaws.com"
-        IMAGE_TAG= "$BUILD_NUMBER"
+        IMAGE_TAG= "1"
         IMAGE_NAME = "schiff-jenkins-ex1"
         REGION = "eu-west-2"
     }
@@ -12,10 +12,7 @@ pipeline {
         stage('Echoing'){
         steps{
             sh '''
-            pwd
-            cd /var/lib/jenkins/workspace/BotBuild/infra/jenkins
-            echo Now s n her 
-            pwd
+            echo Building
             '''
         }
         }
