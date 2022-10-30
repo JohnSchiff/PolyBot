@@ -12,7 +12,7 @@ pipeline {
         stage('Echoing'){
         steps{
             sh '''
-            echo Building
+            echo   Building   
             '''
         }
         }
