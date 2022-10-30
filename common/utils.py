@@ -7,6 +7,8 @@ def search_download_youtube_video(video_name, num_results=1):
     :param video_name: string of the video name
     :param num_results: integer representing how many videos to download
     :return: list of paths to your downloaded video files
+
+    
     """
     with YoutubeDL() as ydl:
         videos = ydl.extract_info(f"ytsearch{num_results}:{video_name}", download=True)['entries']
