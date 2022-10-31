@@ -12,7 +12,7 @@ pipeline {
         stage('Echoing'){
         steps{
             sh '''
-            echo  building   
+            echo     fsdio building   
             '''
         }
         }
