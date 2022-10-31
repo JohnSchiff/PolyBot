@@ -79,4 +79,6 @@ if __name__ == '__main__':
     workers_queue = sqs.get_queue_by_name(QueueName=config.get('bot_to_worker_queue_name'))
 
     my_bot = YoutubeObjectDetectBot(_token)
+
+    
     my_bot.start()
