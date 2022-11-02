@@ -8,6 +8,7 @@ pipeline {
     }
 
     environment {
+        
         APP_ENV = "dev"
     }
 
