@@ -1,5 +1,5 @@
 pipeline {
-    when { changeset "common/*"}
+    when { changeset "dev/common/*"}
 
     agent {
         docker {
