@@ -12,7 +12,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            when { changeset "common/*"}
+            when {  changeset "common/*"}
             steps {
                 // TODO dev bot build stage
                 sh '''
