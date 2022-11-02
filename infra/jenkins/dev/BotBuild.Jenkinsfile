@@ -1,4 +1,6 @@
 pipeline {
+    when { changeset "common/*"}
+
     agent {
         docker {
             // TODO build & push your Jenkins agent image, place the URL here
@@ -11,8 +13,6 @@ pipeline {
         IMAGE_NAME="schiff-repo"
     }
     stages {
-        when { changeset "common/*"}
-
         stage('Build') {
             steps {
                 // TODO dev bot build stage
