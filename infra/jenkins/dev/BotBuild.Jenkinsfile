@@ -12,7 +12,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            when { changeset "dev/common/*"}
+            when { changeset "common/*"}
 
             steps {
                 // TODO dev bot build stage
@@ -28,6 +28,8 @@ pipeline {
         }
 
         stage('Trigger Deploy') {
+            when { changeset "common/*"}
+
             steps {
                 build job: 'BotDeploy', wait: false, parameters: [
                     string(name: 'BOT_IMAGE_NAME', value: "${REGISTRY_URL}/${IMAGE_NAME}:2")
