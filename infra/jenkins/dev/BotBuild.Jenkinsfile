@@ -11,8 +11,9 @@ pipeline {
         IMAGE_NAME="schiff-repo"
     }
     stages {
+        when {  changeset "dev/common/*"}
+
         stage('Build') {
-            when {  changeset "common/*"}
             steps {
                 // TODO dev bot build stage
                 sh '''
