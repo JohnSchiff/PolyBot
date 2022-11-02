@@ -1,6 +1,4 @@
 pipeline {
-    when { changeset "dev/common/*"}
-
     agent {
         docker {
             // TODO build & push your Jenkins agent image, place the URL here
@@ -14,6 +12,8 @@ pipeline {
     }
     stages {
         stage('Build') {
+            when { changeset "dev/common/*"}
+
             steps {
                 // TODO dev bot build stage
                 sh '''
