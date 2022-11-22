@@ -4,7 +4,4 @@
   "bot_to_worker_queue_name": "arn:aws:sqs:eu-west-2:352708296901:schiff-sqs" 
 
 
-
-
-  
 }
