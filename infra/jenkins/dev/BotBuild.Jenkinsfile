@@ -11,7 +11,6 @@ pipeline {
         IMAGE_NAME="schiff-repo"
     }
     stages {
-        
         stage('Build') {
             when { changeset "common/*"}
 
