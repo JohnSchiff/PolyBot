@@ -4,7 +4,7 @@ pipeline {
     environment {
         REGISTRY_URL= "352708296901.dkr.ecr.eu-west-2.amazonaws.com"
         IMAGE_TAG= "1"
-        IMAGE_NAME = "schiff-jenkins-ex1"
+        IMAGE_NAME = "schiff-new-jenkins-agent"
         REGION = "eu-west-2"
     }
 
