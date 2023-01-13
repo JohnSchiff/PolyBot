@@ -18,8 +18,8 @@ pipeline {
                 // TODO dev bot build stage
                 sh '''
                 echo "building..."
-                docker build -t $IMAGE_NAME:$IMAGE_TAG . -f services/bot/Dockerfile
-                docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG
+                sudo docker build -t $IMAGE_NAME:$IMAGE_TAG . -f services/bot/Dockerfile
+                sudo docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG
                 docker push $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG
                 echo "done"
                 '''
