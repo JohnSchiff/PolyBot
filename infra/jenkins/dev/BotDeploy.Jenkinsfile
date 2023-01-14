@@ -16,7 +16,7 @@ pipeline {
     }
 
     stages {
-        stage('Bot Deploy') {
+        stage('BotDeploy') {
             steps {
                 withCredentials([
                     string(credentialsId: 'telegram-bot-token', variable: 'TELEGRAM_TOKEN'),
