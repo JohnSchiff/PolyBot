@@ -14,7 +14,6 @@ pipeline {
            IMAGE_TAG = "0.0.$BUILD_NUMBER"
            IMAGE_NAME = "schiff-botbuild-dev"
 
-
     }
     stages {
         stage('Build') {
