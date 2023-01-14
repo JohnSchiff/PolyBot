@@ -5,7 +5,6 @@ pipeline {
             image '352708296901.dkr.ecr.eu-west-2.amazonaws.com/schiff-jenkins-new-agent:latest'
             args  '--user root -v /var/run/docker.sock:/var/run/docker.sock'
 
-
         }
     
 
