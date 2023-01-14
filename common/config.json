@@ -1,4 +1,5 @@
 {
+  
   "aws_region": "eu-west-2",
   "videos_bucket": "arn:aws:s3:::schifff-aws-ex1-bucket",
   "bot_to_worker_queue_name": "arn:aws:sqs:eu-west-2:352708296901:schiff-sqs" 
