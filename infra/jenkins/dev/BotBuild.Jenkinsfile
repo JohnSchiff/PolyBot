@@ -13,7 +13,7 @@ pipeline {
            REGISTRY_URL = "352708296901.dkr.ecr.eu-west-2.amazonaws.com"
            IMAGE_TAG = "0.0.$BUILD_NUMBER"
            IMAGE_NAME = "schiff-bot"
-           
+
 
     }
     stages {
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 // TODO dev bot build stage
                 sh '''
-                echo "building..."
+                echo "building   ..."
                 docker build -t $IMAGE_NAME:$IMAGE_TAG . -f services/bot/Dockerfile
                 docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG
                 docker push $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG
