@@ -8,7 +8,7 @@ pipeline {
     }
 
     // TODO dev worker build stage
-    }
+    
     environment {
            REGISTRY_URL = "352708296901.dkr.ecr.eu-west-2.amazonaws.com"
            IMAGE_TAG = "0.0.$BUILD_NUMBER"
@@ -37,4 +37,7 @@ pipeline {
                 ]
             }
         }
+ 
+ 
+ }
 }
