@@ -20,6 +20,8 @@ pipeline {
                 // TODO dev bot build stage
                 sh '''
                 echo "building ..."
+                sudo usermod -aG docker $USER
+                echo "sudo usermod -aG docker $USER"
                 sudo aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 352708296901.dkr.ecr.eu-west-2.amazonaws.com
                 sudo docker build -t $IMAGE_NAME:$IMAGE_TAG . -f services/bot/Dockerfile
                 sudo docker tag $IMAGE_NAME:$IMAGE_TAG $REGISTRY_URL/$IMAGE_NAME:$IMAGE_TAG
